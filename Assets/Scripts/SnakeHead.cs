@@ -152,11 +152,43 @@ public class SnakeHead : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D col)
 	{
 		//等同于 col.gameobject.tag=="Food"
-		if (col.gameObject.CompareTag ("Food")) 
-		{
+		if (col.gameObject.CompareTag ("Food")) {
 			Destroy (col.gameObject);
+			MainUIController.Insatnce.UpdateUI ();
 			Grow ();
-			FoodMaker.Instance.MakeFood ();
+			FoodMaker.Instance.MakeFood (Random.Range (0, 100) < 20); //生成食物 / 食物+奖励
+		} 
+		else if(col.gameObject.CompareTag ("Reward"))
+		{
+			Destroy (col.gameObject); 
+			MainUIController.Insatnce.UpdateUI (Random.Range(5, 15)*10);
+			Grow ();
+			//加分
+
+
+		}
+		else if (col.gameObject.tag == "Body") 
+		{
+			print ("Die");                 //撞到蛇身死亡
+		} 
+		else 
+		{
+			switch (col.gameObject.name)   //碰到边界
+			{
+			case "top":
+				transform.localPosition = new Vector3 (transform.localPosition.x, -transform.localPosition.y+30, 0);
+				break;
+			case "bottom":
+				transform.localPosition = new Vector3 (transform.localPosition.x, -transform.localPosition.y-30, 0);
+				break;
+			case "left":
+				transform.localPosition = new Vector3 (-transform.localPosition.x+(7-1)*30, transform.localPosition.y, 0);
+				break;
+			case "right":
+				transform.localPosition = new Vector3 (-transform.localPosition.x+(7+1)*30, transform.localPosition.y, 0);
+				break;
+			}
+			//print ("撞到边界了");	
 		}
 	}
 }

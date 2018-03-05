@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\FoodMaker.cs" />
+     <Compile Include="Assets\Scripts\MainUIController.cs" />
      <Compile Include="Assets\Scripts\SnakeHead.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/ware/Unity 2017/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
