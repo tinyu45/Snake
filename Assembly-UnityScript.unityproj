@@ -89,9 +89,6 @@
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/hello/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
- <Reference Include="Bmob-Unity">
- <HintPath>E:/UnityProject/Snake/Assets/lib/Bmob-Unity.dll</HintPath>
- </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

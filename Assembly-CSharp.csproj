@@ -96,38 +96,6 @@
      <Compile Include="Assets\EasyTouch\Plugins\MonoSingleton.cs" />
      <Compile Include="Assets\EasyTouch\Plugins\MovingJoystick.cs" />
      <Compile Include="Assets\EasyTouch\Plugins\VirtualScreen.cs" />
-     <Compile Include="Assets\Planet Earth Free\SpinFree.cs" />
-     <Compile Include="Assets\Scripts\class02\jisuan.cs" />
-     <Compile Include="Assets\Scripts\class03\CycleTest.cs" />
-     <Compile Include="Assets\Scripts\class04\arrtest.cs" />
-     <Compile Include="Assets\Scripts\class05\arres.cs" />
-     <Compile Include="Assets\Scripts\class05\idefint.cs" />
-     <Compile Include="Assets\Scripts\class06\Account.cs" />
-     <Compile Include="Assets\Scripts\class06\computer.cs" />
-     <Compile Include="Assets\Scripts\class06\D2Point.cs" />
-     <Compile Include="Assets\Scripts\class06\keyboard.cs" />
-     <Compile Include="Assets\Scripts\class06\main.cs" />
-     <Compile Include="Assets\Scripts\class06\MobilePhone.cs" />
-     <Compile Include="Assets\Scripts\class06\mouse.cs" />
-     <Compile Include="Assets\Scripts\class06\Score.cs" />
-     <Compile Include="Assets\Scripts\class06\Score2.cs" />
-     <Compile Include="Assets\Scripts\class06\Student.cs" />
-     <Compile Include="Assets\Scripts\class06\Student2.cs" />
-     <Compile Include="Assets\Scripts\class07\ILikelist\ILinkList.cs" />
-     <Compile Include="Assets\Scripts\class07\ILikelist\node.cs" />
-     <Compile Include="Assets\Scripts\class07\Pet.cs" />
-     <Compile Include="Assets\Scripts\class07\PetBox.cs" />
-     <Compile Include="Assets\Scripts\class07\PetCat.cs" />
-     <Compile Include="Assets\Scripts\class07\PetDog.cs" />
-     <Compile Include="Assets\Scripts\class07\PlayWithPeople.cs" />
-     <Compile Include="Assets\Scripts\class07\test1.cs" />
-     <Compile Include="Assets\Scripts\class08\xiaoming.cs" />
-     <Compile Include="Assets\Scripts\class08\zhansa.cs" />
-     <Compile Include="Assets\Scripts\class09\test.cs" />
-     <Compile Include="Assets\Scripts\class10\test10.cs" />
-     <Compile Include="Assets\Scripts\class11 bomb_study\BombTest.cs" />
-     <Compile Include="Assets\Scripts\class11 bomb_study\Players.cs" />
-     <Compile Include="Assets\Scripts\earthRotate.cs" />
      <Compile Include="Assets\Scripts\FoodMaker.cs" />
      <Compile Include="Assets\Scripts\MainUIController.cs" />
      <Compile Include="Assets\Scripts\SnakeHead.cs" />
@@ -165,9 +133,6 @@
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/hello/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="Bmob-Unity">
- <HintPath>E:/UnityProject/Snake/Assets/lib/Bmob-Unity.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

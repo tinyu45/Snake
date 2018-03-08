@@ -29,11 +29,33 @@ public class SnakeHead : MonoBehaviour {
 	private bool isDie=false;
 
 
-	//int count=0;
+    //int count=0;
+    public EasyJoystick myjoystick;  //操控杆
+	void OnEnable()
+	{
+		EasyJoystick.On_JoystickMove += OnJoystickMove;
+	}
+	void OnDisable()
+	{
+		EasyJoystick.On_JoystickMove -= OnJoystickMove;
+	}
+
+	void OnJoystickMove(MovingJoystick move)
+	{
+		if (move.joystickName != "MYjoystick")
+			return;
+
+		Vector2 offset = move.joystickAxis;  //摇杆偏移
+		if(offset.x*offset.y==0)
+		{
+			print (offset);
+			//transform.LookAt (new Vector3 (transform.position.x + offset.x, transform.position.y + offset.y, 0));
+		}
+
+	}
 
 
-
-	void Awake()
+    void Awake()
 	{
 		canvas = GameObject.Find ("Canvas").transform;
 		//通过Resources.load(string path) 加载资源， path：不需要加Resources/  及文件扩展名
@@ -88,7 +110,8 @@ public class SnakeHead : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//重复调用 Move 方法   [方法名，延迟时间， 调用间隔]；
-		InvokeRepeating("Move", 0, velocity);
+
+//		InvokeRepeating("Move", 0, velocity);
 		x = step; y = 0; // 初始向右
 		gameObject.transform.localRotation=Quaternion.Euler(0,0,- 90);
 	}
@@ -103,6 +126,8 @@ public class SnakeHead : MonoBehaviour {
 	 * **/
 	void Update () {
 
+		/***
+		 * 
 		//按空格加速
 		if (Input.GetKeyDown (KeyCode.Space) && !MainUIController.Insatnce.is_Pause && !isDie) 
 		{
@@ -140,6 +165,9 @@ public class SnakeHead : MonoBehaviour {
 			CancelInvoke (); //取消重复调用
 			InvokeRepeating("Move", 0, velocity);
 		}
+
+		*
+		***/
 	}
 
 
